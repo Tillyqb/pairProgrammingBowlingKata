@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Game {
 
-    public static int roll(int range){
+    public static Integer roll(int range){
         int result = (int) (Math.random() * (range + 1));
         System.out.println(result);
         return result;
@@ -58,7 +58,7 @@ public class Game {
                             score = score + frameScores.get(0) + frameScores.get(1);
                         } else if (frameScores.get(0) == 10) {
                             if (nextFrame.size() == 0) {
-                                break;
+                                score = score + 10;
                             } else {
                                 if (nextFrame.size() == 1) {
                                     score = score + frameScores.get(0) + nextFrame.get(0);
